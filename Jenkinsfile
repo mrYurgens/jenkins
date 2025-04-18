@@ -5,7 +5,10 @@ pipeline {
         stage('Сборка') {
             steps {
                 echo 'Выполняем команды для сборки'
-            }
+		echo "Текущий агент: ${env.NODE_NAME}"
+    		echo "Рабочая директория: ${env.WORKSPACE}"
+    		sh 'uname -a'  // Информация о системе
+		}
         }
         stage('Тестирование') {
             steps {
@@ -23,4 +26,3 @@ pipeline {
 	    }
         }	
     }
-}
