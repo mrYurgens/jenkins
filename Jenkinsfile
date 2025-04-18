@@ -21,13 +21,6 @@ pipeline {
 	    steps {
 		echo 'Finish all activities'
 	    }
-        }
-	post {
-	    failure {
-		mail to: 'yurgens@gamil.com',
-                subject: "Build Failed: ${currentBuild.fullDisplayName}",
-                body: "Проверьте вот эту вот сборку: ${env.BUILD_URL}"
-	    }
-	}
+        }	
     }
 }
