@@ -28,7 +28,6 @@ pipeline {
                 subject: "Build Failed: ${currentBuild.fullDisplayName}",
                 body: "Проверьте вот эту вот сборку: ${env.BUILD_URL}"
 	    }
-	
-}
+	}
     }
 }
